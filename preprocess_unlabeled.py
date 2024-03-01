@@ -141,8 +141,8 @@ def main():
   # random.shuffle(tokens)
   # tokens = tokens[:args.num_docs]
 
-  random.shuffle(segments)
-  utils.write_json([{"tokens": s} for s in segments],
+  random.shuffle(current_doc_tokens)
+  utils.write_json([{"tokens": s} for s in current_doc_tokens],
                    args.data_file.replace(".txt", "") + ".json")
 
 
